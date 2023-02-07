@@ -105,3 +105,6 @@ thead td{
 	color: black;
 	margin: .5rem;
 }
+.invisible{
+	display: none;
+}
