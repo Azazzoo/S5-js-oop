@@ -89,11 +89,19 @@ thead td{
 .boutons{
 	margin: 2rem;
 }
-#reset, #submit{
+#reset, .submit{
 	padding: .75rem;
 	background-color: teal;
 	border: none;
 	border-radius: 4px;
 	color: #fff;
+	margin: .5rem;
+}
+.invalide{
+	padding: .75rem;
+	background-color: red ;
+	border: none;
+	border-radius: 4px;
+	color: black;
 	margin: .5rem;
 }

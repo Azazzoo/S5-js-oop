@@ -16,7 +16,7 @@ function Update(choix){
         let nbfruit = document.getElementById('nbPeches').value;
         let prixfruit = parseInt(document.getElementById('prixPeches').innerText);
         let oldTotal = parseInt(document.getElementById('total').innerText);
-        document.getElementById('stPeche').innerText = (nbfruit * prixfruit) + '$';
+        document.getElementById('stPeche').innerText = (prixfruit* nbfruit) + '$';
         let sousTotal = parseInt(document.getElementById('stPeche').innerText);
         document.getElementById('total').innerText = (oldTotal + prixfruit ) + '$';
     }
@@ -43,9 +43,12 @@ function activer(){
     console.log(value)
     if (value === true){
         document.getElementById('submit').disabled = false;
+        document.getElementById('submit').setAttribute('class','submit') ;
+
     }
     else{
         document.getElementById('submit').disabled = true;
+        document.getElementById('submit').setAttribute('class','invalide') ;
     }
 }
 
