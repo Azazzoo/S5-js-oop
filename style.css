@@ -2,9 +2,22 @@
 Zones principales de la page
 -----------------------------------------------------------------*/
 body {
-	margin : 0;
+	margin : auto;
 }
-
+.container{
+	max-width: 600px;
+	text-align: center;
+}
+.centre{
+	margin: 2rem auto;
+}
+caption{
+	font-size: 2rem;
+	border-bottom: lightgray 1px solid;
+	margin-bottom: 1rem;
+	font-family: "Baskerville Old Face";
+	font-family: "Baskerville Old Face";
+}
 /*---------------------------------------------------------------
 Typographie et style des entêtes
 -----------------------------------------------------------------*/
@@ -26,9 +39,9 @@ h1 {
 	border : 1px solid darkred;
 	background-color : rgba(139,0,0,0.1);
 	color : darkred;
-	padding : 1em;
-	margin-bottom : 3em;
-	width : 90%;
+	padding : 1em 0;
+	margin: 0 auto 3em;
+	width: 500px;
 }
 
 /*---------------------------------------------------------------
@@ -36,7 +49,8 @@ Tableaux
 -----------------------------------------------------------------*/
 table {
 	border-collapse : collapse;
-	margin-bottom : 1em;
+	margin: auto;
+	width: 500px;
 }
 
 thead th, tbody td {
@@ -46,10 +60,40 @@ thead th, tbody td {
 tfoot * {
 	padding : 1em;
 }
+thead td{
+	border-bottom : 1px solid black;
+	padding : 1em;
+	font-weight: 700;
+}
 
 .total {
 	text-align : right;
 }
 #total {
 	vertical-align: middle;
+}
+#nbPeches{
+	width: 4rem;
+
+}
+#nombre{
+	width: 4rem;
+
+}
+#nbPoires{
+	width: 4rem;
+}
+#nbPommes{
+	width: 4rem;
+}
+.boutons{
+	margin: 2rem;
+}
+#reset, #submit{
+	padding: .75rem;
+	background-color: teal;
+	border: none;
+	border-radius: 4px;
+	color: #fff;
+	margin: .5rem;
 }

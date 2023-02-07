@@ -3,56 +3,64 @@
   <head>
     <meta charset="UTF-8">
     <title>Panier de fruits</title>
+    <script src="JS.js"></script>
+    <link rel="stylesheet" href="style.css">
   </head>
-  <body>
+  <body class="container centre">
     <h1>Commander un panier de fruits</h1>
-    <form name="commande">
-      <table>
+    <div class="centre">
+    <form name="commande" method="post" action="merci.html">
+      <div class="centre">
+      <table >
+        <div class="centre">
         <caption>Votre panier</caption>
         <thead>
           <tr>
             <td>Item</td>
             <td>Prix</td>
-            <td>Nombre</td>
+            <td id="nombre">Nombre</td>
             <td>Sous-total</td>
           </tr>
         </thead>
         <tbody>
           <tr id="Peches">
             <td>Sac(s) de pêches</td>
-            <td id="prixPeches" class="prix">10</td>
-            <td><input id="nbPeches"></td>
-            <td class="totalFruit">0</td>
+            <td id="prixPeches" class="prix">10$</td>
+            <td><input type="number" id="nbPeches" onclick="Update('peche')"></td>
+            <td class="totalFruit" id="stPeche">0$</td>
           </tr>
           <tr id="Poires">
             <td>Sac(s) de poires</td>
-            <td id="prixPoires" class="prix">12</td>
-            <td><input id="nbPoires"></td>
-            <td class="totalFruit">0</td>
+            <td id="prixPoires" class="prix" >12$</td>
+            <td><input type="number" id="nbPoires" onclick="Update('poire')"></td>
+            <td class="totalFruit" id="stPoire">0$</td>
           </tr>
           <tr id="Pommes">
             <td>Sac(s) de pommes</td>
-            <td id="prixPommes" class="prix">11</td>
-            <td><input id="nbPommes"></td>
-            <td class="totalFruit">0</td>
+            <td id="prixPommes" class="prix">11$</td>
+            <td><input type="number" id="nbPommes" onclick="Update('pomme')"></td>
+            <td class="totalFruit" id="stPomme">0$</td>
           </tr>
         </tbody>
         <tfoot>
           <tr>
             <th class="total" colspan="3">Total</th>
-            <td class="total" id="total"></td>
+            <td class="total" id="total">0$</td>
           </tr>
         </tfoot>
+        </div>
       </table>
       <p class="error invisible center">La valeur minimale des paniers est de 20$.</p>
       <div class="center">
-        <input id="conditions" type="checkbox" required>
-        <label for="conditions">J'ai lu et j'accepte les conditions de vente.</label>
+        <input id="conditions" type="checkbox" onclick="activer()" required>
+        <label for="conditions" >J'ai lu et j'accepte les conditions de vente.</label>
         <div class="boutons">
-          <input id="submit" type="submit" disabled>
-          <input id="reset" type="reset">
+          <input id="submit" type="submit" disabled onclick="return Valider()" value="Valider">
+          <input id="reset" type="reset" value="Réinitialiser">
         </div>
       </div>
+      </div>
     </form>
+    </div>
   </body>
 </html>
